@@ -43,6 +43,7 @@
 	border-radius:8px;
 	background-size:cover;
 	background-repeat:no-repeat;
+	height: 100vh;
 }
 
 .banner-one_content{
@@ -57,12 +58,7 @@
 	padding-bottom:190px;
 }
 
-.banner-one_heading{
-	max-width:820px;
-	margin-bottom:50px;
-	color: var(--color-two);
-	text-transform: uppercase;
-}
+
 
 .banner-one_heading span{
 	position:relative;
@@ -284,10 +280,12 @@
 }
 
 .story-one_image{
-	position:relative;
+	position: center;
 	overflow:hidden;
 	border-radius:16px;
 	display:inline-block;
+	height: 100vh;
+	margin-left: 100px;
 }
 
 
@@ -792,6 +790,7 @@
 .app-one_image{
 	position:relative;
 	text-align:right;
+	margin-top: 0px;
 }
 
 .app-one_experiance{
@@ -837,6 +836,8 @@
 	font-size:14px;
 	color:var(--color-six);
 }
+
+
 
 /*** 
 
@@ -1699,7 +1700,6 @@
 
 .testimonial-one{
 	position:relative;
-	padding:70px 0px 60px;
 }
 
 .testimonial-block_one{
@@ -2344,7 +2344,7 @@
 
 .services-one{
 	position:relative;
-	padding:100px 0px 100px;
+	/* padding:100px 0px 100px; */
 }
 
 .services-one.style-two::before{
@@ -4749,7 +4749,7 @@
 	right: 0px;
 	left: 0px;
 	bottom:0px;
-	height:315px;
+	height:100vh;
 	background-position: center bottom;
 	background-repeat: repeat-x;
 }
@@ -7086,4 +7086,121 @@
 
 .error-one .button-box{
 	margin-top:30px;
+}
+/* Remove unnecessary left space for the logo */
+.logo-box {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	/* Align logo to the left */
+	margin: 0;
+	/* Remove any margins or padding that might add space */
+
+}
+
+/* Set the size of the logo */
+.logo img {
+	width: 80px;
+	height: 50px;
+	padding-left: 60px;
+}
+
+/* Main Header Layout */
+.main-header {
+	display: flex;
+	justify-content: space-between;
+	/* Distribute space between logo, nav, and other items */
+	align-items: center;
+	padding: 10px 30px;
+	/* Adjust padding for a balanced layout */
+	width: 100%;
+	/* Ensure the header takes up the full width */
+}
+
+/* Navigation Outer Layout */
+.nav-outer {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	/* Allow the navigation area to take available space */
+	justify-content: center;
+	/* Center the navigation items */
+}
+
+/* Navbar Layout */
+.navbar-expand-md {
+	display: flex;
+}
+
+/* Navigation Menu */
+.navigation {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.navigation li {
+	margin: 0 20px;
+	/* Space between navigation items */
+}
+
+/* Header Options Box */
+.header-options_box {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	/* Space between the icons */
+}
+
+/* Header Button Box */
+.header_button-box {
+	margin-left: 20px;
+	/* Space between the button and other header elements */
+}
+
+/* Mobile Layout - Stack header items vertically */
+@media (max-width: 768px) {
+	.main-header {
+		flex-direction: column;
+		/* Stack items vertically */
+		padding: 15px;
+	}
+
+	.nav-outer {
+		margin-top: 20px;
+		/* Add space between logo and navigation */
+	}
+
+	.navigation {
+		flex-direction: column;
+		/* Stack navigation items vertically */
+		margin-top: 15px;
+	}
+
+	.header-options_box {
+		margin-top: 15px;
+		/* Add space between header options and other elements */
+	}
+}
+
+@media (max-width: 768px) {
+	.main-header {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.nav-outer {
+		flex-direction: column;
+		margin-top: 15px;
+	}
+
+	.navigation {
+		flex-direction: column;
+		margin-top: 10px;
+	}
+
+	.header-options_box {
+		margin-top: 20px;
+	}
 }
